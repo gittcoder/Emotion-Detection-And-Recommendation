@@ -1,0 +1,21 @@
+{% extends 'base.html'%}{% block content %}
+
+<h1 style="text-align: center">Recommending Songs Based on Mood</h1>
+<div style="justify-content: center; display: flex; margin-top: 30px">
+  <img src="{{ url_for('video') }}" />
+  <a href="{{'https://spotify.com'+url_for('result')}}"  style="display: block;
+  position:absolute;
+  top:90%;
+  width: 315px;
+  height: 75px;
+  background: #4eafa0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  text-decoration:none;">Suggested Song For You</a>
+</div>
+{% endblock %}

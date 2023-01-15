@@ -1,0 +1,9 @@
+conda activate ml
+cd C:\Users\adity\Desktop\D\extra\ml\moodometer\Emotion_detection_with_CNN
+python TestEmotionDetector.py
+
+
+
+conda activate ml
+cd C:\Users\adity\Desktop\D\extra\ml\moodometer\Emotion_App
+python app.py
