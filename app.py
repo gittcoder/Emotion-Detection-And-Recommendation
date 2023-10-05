@@ -19,6 +19,7 @@ def gen(camera):
         emotions[0]+=len(frame[1])
         test_list[0].append(frame[1])
         print(frame[1])
+        result()
         yield(b'--frame\r\n'
        b'Content-Type:  image/jpeg\r\n\r\n' + frame[0] +
          b'\r\n\r\n')
@@ -36,6 +37,7 @@ def show_res():
                 res = i
         print("result : "+res)
         link="https://spotify.com"
+        
         return res
     else:
         print(test_list)
@@ -69,10 +71,13 @@ def video():
 # def video():
 #     return emotion_testing()
 
-@app.route('/result')
+
 
 def result():
-    return render_template('results.html',result=show_res())
+    with app.app_context():
+        print("Returning result!!!")
+        return render_template('results.html',result=show_res())
+
 
 
 

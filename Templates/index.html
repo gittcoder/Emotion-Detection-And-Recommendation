@@ -3,7 +3,7 @@
 <h1 style="text-align: center">Recommending Songs Based on Mood</h1>
 <div style="justify-content: center; display: flex; margin-top: 30px">
   <img src="{{ url_for('video') }}" />
-  <a href="{{'https://spotify.com'+url_for('result')}}"  style="display: block;
+  <a href="https://spotify.com/+{{result}}"  style="display: block;
   position:absolute;
   top:90%;
   width: 315px;
@@ -17,5 +17,6 @@
   font-size: 20px;
   line-height: 25px;
   text-decoration:none;">Suggested Song For You</a>
+
 </div>
 {% endblock %}
